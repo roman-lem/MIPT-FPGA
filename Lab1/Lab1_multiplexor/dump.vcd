@@ -1,0 +1,78 @@
+$date
+	Wed Oct 25 12:36:37 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_Nto1_tb $end
+$var wire 1 ! out $end
+$var reg 16 " addr [15:0] $end
+$var reg 7 # test_vec [6:0] $end
+$var integer 32 $ i [31:0] $end
+$scope module mux_7to1 $end
+$var wire 16 % addr [15:0] $end
+$var wire 7 & vec [6:0] $end
+$var wire 1 ! res $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+0!
+$end
+#10
+b1 $
+1!
+b1 #
+b1 &
+#20
+b10 $
+b1 "
+b1 %
+1!
+b10 #
+b10 &
+#30
+b11 $
+b10 "
+b10 %
+1!
+b100 #
+b100 &
+#40
+b100 $
+b11 "
+b11 %
+1!
+b1000 #
+b1000 &
+#50
+b101 $
+b100 "
+b100 %
+1!
+b10000 #
+b10000 &
+#60
+b110 $
+b101 "
+b101 %
+1!
+b100000 #
+b100000 &
+#70
+b111 $
+b110 "
+b110 %
+1!
+b1000000 #
+b1000000 &
+#80

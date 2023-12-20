@@ -142,12 +142,14 @@ endmodule
 Для тестов были выбраны следующие данные: частота дискретизации = 1МГц, частоты синусов = 5кГц, 10кГц, 15кГц, ширина адреса таблицы = 16 бит.
 
 Результаты с выключенным dithering
+
 ![](./NCO/img/sin2.png)
 ![](./NCO/img/sin_step128.0.png)
 ![](./NCO/img/sin_step256.0.png)
 ![](./NCO/img/sin_step384.0.png)
 
 Результаты с включенным dithering
+
 ![](./NCO/img/sin.png)
 ![](./NCO/img/sin_step128.0dither.png)
 ![](./NCO/img/sin_step256.0dither.png)

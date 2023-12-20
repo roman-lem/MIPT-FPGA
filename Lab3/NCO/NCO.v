@@ -18,6 +18,10 @@ module NCO (clk, rst, step, out);
 
   // RTL code for phase accumulator'
 
+  // dither generation
+  wire [2:0]dither;
+  //assign dither = 0; // replace with line by LSFR module instantiation to get dither value
+  nco_dither_lsfr #(.OUT_SIZE(3)) lsfr(.clk(clk), .rst(rst), .out(dither));
   always @(posedge clk)
   begin
     if (rst)
@@ -38,11 +42,7 @@ module NCO (clk, rst, step, out);
       LUT[$rtoi(phase)] = $floor(($sin(2*PI * phase / 2.0**ADDR_WIDTH)) * 2**(LUT_WIDTH-2) );
     end
   end
-
-  // dither generation
-  wire [1:0]dither;
-  //assign dither = 0; // replace with line by LSFR module instantiation to get dither value
-  nco_dither_lsfr #(.OUT_SIZE(2)) lsfr(.clk(clk), .rst(rst), .out(dither));
+  
   // addr generation
   reg [ADDR_WIDTH-1:0] addr;
 
@@ -51,7 +51,7 @@ module NCO (clk, rst, step, out);
     if (rst)
       addr <= 0;
     else
-      addr <= dither + ph_accum [ADDR_WIDTH+FRACT_WIDTH-1:FRACT_WIDTH];
+      addr <= ph_accum [ADDR_WIDTH+FRACT_WIDTH-1:FRACT_WIDTH];
   end
 
 

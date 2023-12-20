@@ -4,8 +4,8 @@ from cocotb.triggers import FallingEdge, Timer
 from cocotb.clock import Clock
 
 desired_freq = np.array([500, 1000, 1500]) #desired frequencies in Hz
-sampling_freq = 1000000 #Hz
-n = 16
+sampling_freq = 10000 #Hz
+n = 8
 step = 2**n * desired_freq / sampling_freq
 print(step)
 

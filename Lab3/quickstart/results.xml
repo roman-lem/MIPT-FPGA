@@ -1,0 +1,11 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1703032859" />
+    <testcase name="my_first_test" classname="test_my_design" file="/home/roman/Documents/fpga/Lab3/quickstart/test_my_design.py" lineno="10" time="0.001191854476928711" sim_time_ns="20.001" ratio_time="16781.411143028607">
+      <failure message="Test failed with RANDOM_SEED=1703032859" />
+    </testcase>
+    <testcase name="my_second_test" classname="test_my_design" file="/home/roman/Documents/fpga/Lab3/quickstart/test_my_design.py" lineno="40" time="0.0005295276641845703" sim_time_ns="6.000999999999998" ratio_time="11332.741244484461">
+      <failure message="Test failed with RANDOM_SEED=1703032859" />
+    </testcase>
+  </testsuite>
+</testsuites>

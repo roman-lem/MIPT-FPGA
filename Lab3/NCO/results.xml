@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1703072358" />
+    <testcase name="sin_freq1" classname="nco_tb" file="/home/roman/Documents/fpga/Lab3/NCO/nco_tb.py" lineno="13" time="8.516009330749512" sim_time_ns="100099.501" ratio_time="11754.273288377202" />
+    <testcase name="sin_freq2" classname="nco_tb" file="/home/roman/Documents/fpga/Lab3/NCO/nco_tb.py" lineno="32" time="0.8828656673431396" sim_time_ns="10099.50099999999" ratio_time="11439.453785073578" />
+    <testcase name="sin_freq3" classname="nco_tb" file="/home/roman/Documents/fpga/Lab3/NCO/nco_tb.py" lineno="51" time="0.8537626266479492" sim_time_ns="10099.501000000004" ratio_time="11829.401621446887" />
+  </testsuite>
+</testsuites>

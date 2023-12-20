@@ -3,9 +3,9 @@ import numpy as np
 from cocotb.triggers import FallingEdge, Timer
 from cocotb.clock import Clock
 
-desired_freq = np.array([500, 1000, 1500]) #desired frequencies in Hz
-sampling_freq = 10000 #Hz
-n = 8
+desired_freq = np.array([5000, 10000, 15000]) #desired frequencies in Hz
+sampling_freq = 100000 #Hz
+n = 16
 step = 2**n * desired_freq / sampling_freq
 print(step)
 
@@ -14,7 +14,7 @@ print(step)
 async def sin_freq1(dut):
     cocotb.start_soon(Clock(dut.clk, 1, units="ns").start())
 
-    sample_num = 10000
+    sample_num = 100000
     sin_table = np.zeros(sample_num)
 
     dut.step.value = int(step[0])

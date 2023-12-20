@@ -19,15 +19,15 @@ module NCO (clk, rst, step, out);
   // RTL code for phase accumulator'
 
   // dither generation
-  wire [2:0]dither;
+  wire [3:0]dither;
   //assign dither = 0; // replace with line by LSFR module instantiation to get dither value
-  nco_dither_lsfr #(.OUT_SIZE(3)) lsfr(.clk(clk), .rst(rst), .out(dither));
+  nco_dither_lsfr #(.OUT_SIZE(4)) lsfr(.clk(clk), .rst(rst), .out(dither));
   always @(posedge clk)
   begin
     if (rst)
       ph_accum <= 0;
     else
-      ph_accum <= ph_accum + step;
+      ph_accum <= ph_accum + step + dither;
   end
 
 

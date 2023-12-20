@@ -144,13 +144,13 @@ endmodule
 Результаты с выключенным dithering
 
 ![](./NCO/img/sin2.png)
-![](./NCO/img/sin_step128.0.png)
-![](./NCO/img/sin_step256.0.png)
-![](./NCO/img/sin_step384.0.png)
+![](./NCO/img/sin_step3276.8.png)
+![](./NCO/img/sin_step6553.6.png)
+![](./NCO/img/sin_step9830.4.png)
 
 Результаты с включенным dithering
 
 ![](./NCO/img/sin.png)
-![](./NCO/img/sin_step128.0dither.png)
-![](./NCO/img/sin_step256.0dither.png)
-![](./NCO/img/sin_step384.0dither.png)
+![](./NCO/img/sin_step3276.8dither.png)
+![](./NCO/img/sin_step6553.6dither.png)
+![](./NCO/img/sin_step9830.4dither.png)
